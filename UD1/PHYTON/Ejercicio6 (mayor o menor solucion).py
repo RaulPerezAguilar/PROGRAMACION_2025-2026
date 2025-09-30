@@ -7,4 +7,4 @@ if num1 > num2:    #Comparamos los numeros para saber cual es mayor
 elif num1 < num2:
     print("El numero mayor es: " + str(num2))
 else:
-    print("Los numeros son iguales")
+    print("Los numeros son iguales") 
