@@ -1,0 +1,9 @@
+print ("Introduce un numero:")
+num1 = int(input())
+print ("Introduce otro numero:")
+num2 = int(input())
+while num2 != 0: #Bucle mientras num2 no sea 0
+    resto = num1 % num2 #Averiguamos el resto de la division entre num1 y num2
+    num1 = num2 #Asignamos a num1 el valor de num2
+    num2 = resto #Asignamos a num2 el valor del resto
+print("El maximo comun divisor es: " + str(num1)) #Cuando num2 sea 0, num1 tendra el valor del maximo comun divisor
