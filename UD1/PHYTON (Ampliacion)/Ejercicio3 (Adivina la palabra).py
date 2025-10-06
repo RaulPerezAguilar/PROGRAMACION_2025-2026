@@ -2,7 +2,7 @@ print ("Adivina la palabra secreta")
 palabra = "python"
 while True:
     print("Introduce la palabra: ")
-    intento = input()
+    intento = input().lower()
     if intento == palabra:
         print("Has acertado")
         break
