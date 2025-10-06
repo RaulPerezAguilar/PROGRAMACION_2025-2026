@@ -5,5 +5,6 @@ while True:
     if numero == usuario:
         break
     else:
-        print(str(numero) + " Hola Mundo")
         numero = numero + 1
+        print(str(numero) + " Hola Mundo")
+        
