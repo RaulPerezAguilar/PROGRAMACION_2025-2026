@@ -6,4 +6,4 @@ while True:
         break
     else: 
         numero = numero + 1
-        print (str(numero))
+        print (numero)
