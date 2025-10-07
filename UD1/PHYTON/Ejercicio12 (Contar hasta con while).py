@@ -1,12 +1,12 @@
-numero = 0
+i = 0
 while True:
     print ("Hasta que numero quieres contar: ")
-    usuario = int(input())
-    if usuario >= 0:
-        if numero == usuario:
+    n = int(input())
+    if n >= 0:
+        if i == n:
             break
         else: 
-            numero = numero + 1
-            print (numero)
+            i = i + 1
+            print (i)
     else:
         print ("El numero debe ser mayor que 0")
