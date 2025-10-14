@@ -17,3 +17,4 @@ def reemplazar (cadena):
 frase = input("Introduce una frase: ")
 print("Número de vocales:", contar(frase))
 print("Frase modificada:", reemplazar(frase))
+# Ejercicio 24 (Cuenta vocales)
