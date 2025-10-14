@@ -1,8 +1,7 @@
-def contar (cadena):
-    vocales = "aeiouAEIOU"
+def contar (texto):
     contador = 0
-    for x in cadena:
-        if x in vocales:
+    for x in texto:
+        if x in "aeiouAEIOU":
             contador += 1
     return contador
 
