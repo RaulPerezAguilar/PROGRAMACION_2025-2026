@@ -1,5 +1,5 @@
+nombre = input("Introduce tu nombre de usuario: ")
 while True:
-    nombre = input("Introduce tu nombre de usuario: ")
     contrasena = input("Introduce tu contraseña: ")
     longitud = len(contrasena)
     if longitud < 8:
