@@ -1,6 +1,6 @@
 def PedirNums():
-    n1 = float(input("Introduce el primer número: "))
-    n2 = float(input("Introduce el segundo número: "))
+    n1 = int(input("Introduce el primer número: "))
+    n2 = int(input("Introduce el segundo número: "))
     return n1, n2
 
 def suma(n1, n2):
@@ -23,7 +23,7 @@ while True:
     print("Calculadora básica")
     print("Operaciones disponibles: suma, resta, multiplicacion, division")
     n = input("¿Que operacion quieres hacer?(Salir para terminar) ")
-    
+    n1, n2 = PedirNums()
     match n:
         case "suma":
             print("El resultado de la suma es:", suma)
