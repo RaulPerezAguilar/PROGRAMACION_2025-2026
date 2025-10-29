@@ -4,180 +4,212 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portafolio de Programación</title>
+
+  <!-- Tipografía moderna -->
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
   <style>
-    /* ---- Estilos base ---- */
-    body {
+    :root {
+      --bg-color: #1e1e1e;
+      --card-color: #252526;
+      --text-color: #e0e0e0;
+      --accent-color: #569cd6;
+      --accent-hover: #3a8dd1;
+      --muted: #9e9e9e;
+    }
+
+    * {
+      box-sizing: border-box;
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #1e1e1e;
-      color: #e0e0e0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg-color);
+      color: var(--text-color);
       line-height: 1.6;
+      overflow-x: hidden;
     }
 
     header {
       text-align: center;
-      padding: 2rem;
-      background: linear-gradient(135deg, #2c2c2c, #3d3d3d);
-      border-bottom: 2px solid #555;
+      padding: 3rem 1rem;
+      background: linear-gradient(135deg, #2a2a2a, #1a1a1a);
+      border-bottom: 2px solid var(--accent-color);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
     }
 
     header h1 {
-      margin: 0;
-      color: #00bcd4;
+      font-family: 'Fira Code', monospace;
+      color: var(--accent-color);
       font-size: 2.5rem;
-      letter-spacing: 1px;
-      animation: fadeIn 1s ease-in-out;
+      margin-bottom: 0.5rem;
+      animation: fadeInDown 1s ease forwards;
     }
 
     header p {
-      color: #ccc;
-      font-style: italic;
+      color: var(--muted);
+      font-size: 1.1rem;
+      animation: fadeIn 1.2s ease forwards;
     }
 
-    /* ---- Contenedor principal ---- */
-    .container {
-      width: 90%;
+    main {
       max-width: 1000px;
       margin: 2rem auto;
-      animation: fadeUp 1s ease-in-out;
+      padding: 0 1rem;
     }
 
-    .folder {
-      background-color: #2b2b2b;
+    section {
+      margin-bottom: 3rem;
+    }
+
+    h2 {
+      font-family: 'Fira Code', monospace;
+      color: var(--accent-color);
       margin-bottom: 1rem;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.3);
-      transition: transform 0.2s;
-    }
-
-    .folder:hover {
-      transform: scale(1.01);
-    }
-
-    .folder h2 {
-      background-color: #00bcd4;
-      color: #1e1e1e;
-      padding: 0.8rem;
-      margin: 0;
-      border-radius: 8px 8px 0 0;
-      cursor: pointer;
-      user-select: none;
-    }
-
-    .content {
-      padding: 1rem;
-      display: none;
-    }
-
-    .content ul {
-      list-style: none;
-      padding-left: 1rem;
-    }
-
-    .content li {
-      margin: 0.3rem 0;
+      border-left: 4px solid var(--accent-color);
       padding-left: 0.5rem;
-      border-left: 2px solid #00bcd4;
-      transition: color 0.2s;
     }
 
-    .content li:hover {
-      color: #00bcd4;
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: var(--card-color);
+      padding: 1.5rem;
+      border-radius: 10px;
+      transition: transform 0.3s ease, background 0.3s ease;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      background: #2e2e2e;
+    }
+
+    .card h3 {
+      color: var(--text-color);
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: 0.95rem;
     }
 
     footer {
       text-align: center;
-      padding: 1rem;
+      padding: 2rem 1rem;
       font-size: 0.9rem;
-      color: #888;
-      border-top: 1px solid #444;
+      color: var(--muted);
+      border-top: 1px solid #333;
     }
 
-    /* ---- Animaciones ---- */
     @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(-10px); }
-      to { opacity: 1; transform: translateY(0); }
+      from {opacity: 0;}
+      to {opacity: 1;}
     }
 
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
+    @keyframes fadeInDown {
+      from {opacity: 0; transform: translateY(-20px);}
+      to {opacity: 1; transform: translateY(0);}
     }
+
+    /* Interactividad simple */
+    .card:active {
+      transform: scale(0.98);
+    }
+
+    .category {
+      color: var(--accent-color);
+      font-size: 0.9rem;
+      margin-bottom: 0.4rem;
+      display: inline-block;
+    }
+
   </style>
 </head>
 <body>
-
   <header>
-    <h1>📘 Portafolio de Programación</h1>
-    <p>Ejercicios y proyectos de PSeInt y Python</p>
+    <h1>Portafolio de Programación</h1>
+    <p>Ejercicios y proyectos realizados en Python y PSeInt</p>
   </header>
 
-  <div class="container">
-    <!-- UD1 -->
-    <div class="folder">
-      <h2 onclick="toggleContent(this)">📁 UD1</h2>
-      <div class="content">
-        <ul>
-          <li><strong>PSeInt:</strong>
-            <ul>
-              <li>Ejercicio8 (Calificación notas)</li>
-              <li>Ejercicio10 (Qué hace)</li>
-              <li>Ejercicio1Python (Hola + nombre)</li>
-              <li>Ejercicio2Python (Login)</li>
-              <li>Ejercicio4 (Área Círculo)</li>
-              <li>Ejercicio9 (Año bisiesto)</li>
-              <li>...</li>
-            </ul>
-          </li>
-          <li><strong>Python:</strong>
-            <ul>
-              <li>Ejercicio1 (Hola mundo con variable)</li>
-              <li>Ejercicio5 (Login correcto con bucle)</li>
-              <li>Ejercicio10 (100 veces hola mundo)</li>
-              <li>Ejercicio15 (Tabla de multiplicar)</li>
-              <li>Ejercicio27 (Calculadora optimizada)</li>
-              <li>ProyectoT1.py</li>
-              <li>...</li>
-            </ul>
-          </li>
-          <li><strong>Python (Ampliación):</strong>
-            <ul>
-              <li>Ejercicio1 (Máximo común divisor)</li>
-              <li>Ejercicio4 (Ordenar)</li>
-              <li>Ejercicio7 (Día de la semana)</li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </div>
+  <main>
+    <section>
+      <h2>📘 Unidad 1 - Fundamentos</h2>
+      <div class="card-grid">
+        <div class="card">
+          <span class="category">Python</span>
+          <h3>Proyecto T1</h3>
+          <p>Proyecto principal de la Unidad 1, integrando estructuras de control y funciones básicas.</p>
+        </div>
 
-    <!-- UD2 -->
-    <div class="folder">
-      <h2 onclick="toggleContent(this)">📁 UD2</h2>
-      <div class="content">
-        <ul>
-          <li><strong>Python:</strong>
-            <ul>
-              <li>Ejercicio1 (Probar y recorrer Arrays)</li>
-            </ul>
-          </li>
-        </ul>
+        <div class="card">
+          <span class="category">PSeInt</span>
+          <h3>Ejercicios Básicos</h3>
+          <p>Primeros algoritmos: condicionales, bucles, y operaciones aritméticas.</p>
+        </div>
+
+        <div class="card">
+          <span class="category">Python</span>
+          <h3>Ejercicio 10 - Calculadora Básica</h3>
+          <p>Programa que realiza operaciones matemáticas simples con validaciones.</p>
+        </div>
+
+        <div class="card">
+          <span class="category">Python (Ampliación)</span>
+          <h3>Ejercicio 5 - Palabra Larga</h3>
+          <p>Ejercicio enfocado en el manejo de strings y funciones personalizadas.</p>
+        </div>
       </div>
-    </div>
-  </div>
+    </section>
+
+    <section>
+      <h2>📗 Unidad 2 - Arrays y Librerías</h2>
+      <div class="card-grid">
+        <div class="card">
+          <span class="category">Python</span>
+          <h3>Ejercicio 1 - Recorrer Arrays</h3>
+          <p>Uso de bucles para recorrer y mostrar elementos de listas en Python.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>💡 Proyectos Destacados</h2>
+      <div class="card-grid">
+        <div class="card">
+          <span class="category">Python</span>
+          <h3>Login Seguro</h3>
+          <p>Simulación de un sistema de autenticación con validación de credenciales.</p>
+        </div>
+
+        <div class="card">
+          <span class="category">Python</span>
+          <h3>Calculadora Avanzada</h3>
+          <p>Incluye funciones matemáticas, raíces y potencias implementadas con librerías propias.</p>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <footer>
-    © 2025 - Portafolio creado por [Tu Nombre] | GitHub Pages
+    <p>© 2025 | Portafolio de Programación — Desarrollado con Python y PSeInt</p>
   </footer>
 
   <script>
-    function toggleContent(element) {
-      const content = element.nextElementSibling;
-      const isVisible = content.style.display === 'block';
-      document.querySelectorAll('.content').forEach(c => c.style.display = 'none');
-      content.style.display = isVisible ? 'none' : 'block';
-    }
+    // Pequeña animación interactiva para las tarjetas
+    document.querySelectorAll('.card').forEach(card => {
+      card.addEventListener('click', () => {
+        alert('Este módulo muestra los detalles del ejercicio: ' + card.querySelector('h3').textContent);
+      });
+    });
   </script>
-
 </body>
 </html>
