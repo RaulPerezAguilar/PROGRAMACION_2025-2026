@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Sitio personal de programación - proyectos, código y tutoriales." />
+  <title>Mi Página de Programación</title>
+  <style>
+    :root {
+      --bg-color: #0d1117;
+      --text-color: #e6edf3;
+      --accent-color: #58a6ff;
+      --card-bg: #161b22;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Fira Code", monospace;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      text-align: center;
+    }
+
+    header {
+      padding: 2rem;
+    }
+
+    header h1 {
+      color: var(--accent-color);
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      opacity: 0.8;
+    }
+
+    main {
+      width: 90%;
+      max-width: 800px;
+      margin-top: 2rem;
+    }
+
+    .card {
+      background-color: var(--card-bg);
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    a {
+      color: var(--accent-color);
+      text-decoration: none;
+    }
+
+    footer {
+      margin-top: auto;
+      padding: 2rem;
+      opacity: 0.7;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>👨‍💻 Mi Página de Programación</h1>
+    <p>Proyectos, tutoriales y aprendizaje continuo en desarrollo web y software.</p>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>💡 Sobre mí</h2>
+      <p>Hola, soy <strong>Tu Nombre</strong>, un apasionado por el código y la tecnología. Aquí comparto mis proyectos y lo que voy aprendiendo.</p>
+    </section>
+
+    <section class="card">
+      <h2>🚀 Proyectos Destacados</h2>
+      <ul style="list-style: none; padding: 0;">
+        <li><a href="https://github.com/tuusuario/proyecto1" target="_blank">🔗 Proyecto 1</a> – App web con HTML, CSS y JavaScript.</li>
+        <li><a href="https://github.com/tuusuario/proyecto2" target="_blank">🔗 Proyecto 2</a> – Script en Python para automatizar tareas.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>📫 Contacto</h2>
+      <p>Puedes encontrarme en <a href="https://github.com/tuusuario" target="_blank">GitHub</a> o escribirme a <a href="mailto:tuemail@example.com">tuemail@example.com</a>.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Tu Nombre — Hecho con ❤️ y HTML.</p>
+  </footer>
+</body>
+</html>
