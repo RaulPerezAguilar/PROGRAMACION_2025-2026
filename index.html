@@ -3,210 +3,157 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portafolio de Programación 2025-26</title>
+  <title>Portafolio de Programación 2025-2026</title>
+
   <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
   <style>
     :root {
-      --bg-color: #1e1e1e;
-      --card-color: #252526;
-      --text-color: #e0e0e0;
-      --accent-color: #569cd6;
-      --accent-hover: #3a8dd1;
+      --bg: #1e1e1e;
+      --fg: #e0e0e0;
+      --accent: #4fa3d1;
       --muted: #9e9e9e;
+      --section-bg: #252526;
     }
-    * { box-sizing: border-box; margin:0; padding:0; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
       font-family: 'Inter', sans-serif;
-      background: var(--bg-color);
-      color: var(--text-color);
-      line-height: 1.6;
-      overflow-x: hidden;
+      background-color: var(--bg);
+      color: var(--fg);
+      padding-bottom: 4rem;
+      animation: fadeIn 1s ease;
     }
     header {
       text-align: center;
       padding: 3rem 1rem;
-      background: linear-gradient(135deg,#2a2a2a,#1a1a1a);
-      border-bottom: 2px solid var(--accent-color);
-      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+      background: linear-gradient(135deg, #2a2a2a, #1a1a1a);
+      border-bottom: 2px solid var(--accent);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
     }
     header h1 {
       font-family: 'Fira Code', monospace;
-      color: var(--accent-color);
-      font-size: 2.5rem;
-      margin-bottom: .5rem;
-      animation: fadeInDown 1s ease forwards;
+      color: var(--accent);
+      font-size: 2.3rem;
+      margin-bottom: 0.5rem;
     }
     header p {
       color: var(--muted);
       font-size: 1.1rem;
-      animation: fadeIn 1.2s ease forwards;
     }
     main {
-      max-width: 1000px;
+      max-width: 900px;
       margin: 2rem auto;
       padding: 0 1rem;
     }
     section {
-      margin-bottom: 3rem;
+      background: var(--section-bg);
+      border-radius: 10px;
+      padding: 1.5rem 2rem;
+      margin-bottom: 2rem;
+      transition: background 0.3s ease;
+    }
+    section:hover {
+      background: #2c2c2c;
     }
     h2 {
       font-family: 'Fira Code', monospace;
-      color: var(--accent-color);
+      color: var(--accent);
+      font-size: 1.6rem;
       margin-bottom: 1rem;
-      border-left: 4px solid var(--accent-color);
-      padding-left: .5rem;
+      border-left: 4px solid var(--accent);
+      padding-left: .6rem;
     }
-    .card-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
-      gap: 1.5rem;
-    }
-    .card {
-      background: var(--card-color);
-      padding: 1.5rem;
-      border-radius: 10px;
-      transition: transform .3s ease, background .3s ease;
-      cursor: pointer;
-      text-decoration: none;
-      display: block;
-    }
-    .card:hover {
-      transform: translateY(-6px);
-      background: #2e2e2e;
-    }
-    .card h3 {
-      color: var(--text-color);
+    h3 {
+      color: var(--accent);
+      margin-top: 1rem;
+      margin-bottom: .6rem;
       font-size: 1.2rem;
-      margin-bottom: .5rem;
     }
-    .card p {
-      color: var(--muted);
-      font-size: 0.95rem;
+    ul {
+      list-style: none;
+      padding-left: 1rem;
+      border-left: 1px solid #333;
+    }
+    li {
+      margin-bottom: .5rem;
+      transition: transform .2s ease;
+    }
+    li:hover {
+      transform: translateX(4px);
+    }
+    a {
+      color: var(--fg);
+      text-decoration: none;
+    }
+    a:hover {
+      color: var(--accent);
+      text-decoration: underline;
     }
     footer {
       text-align: center;
-      padding: 2rem 1rem;
-      font-size: 0.9rem;
       color: var(--muted);
-      border-top: 1px solid #333;
+      margin-top: 2rem;
+      font-size: 0.9rem;
     }
     @keyframes fadeIn {
-      from { opacity:0; }
-      to { opacity:1; }
-    }
-    @keyframes fadeInDown {
-      from { opacity:0; transform: translateY(-20px); }
-      to { opacity:1; transform: translateY(0); }
-    }
-    .card:active {
-      transform: scale(0.98);
-    }
-    .category {
-      color: var(--accent-color);
-      font-size: .9rem;
-      margin-bottom: .4rem;
-      display: inline-block;
+      from {opacity: 0; transform: translateY(10px);}
+      to {opacity: 1; transform: translateY(0);}
     }
   </style>
 </head>
+
 <body>
   <header>
-    <h1>Portafolio de Programación 2025-26</h1>
-    <p>Repositorio de ejercicios en Python y PSeInt — IES Huércal‑Overa</p>
+    <h1>Portafolio de Programación 2025-2026</h1>
+    <p>Ejercicios realizados en Python y PSeInt</p>
   </header>
 
   <main>
-    <!-- Unidad 1 – PSeInt -->
+    <!-- UD1 -->
     <section>
-      <h2>📘 UD1 - PSeInt</h2>
-      <div class="card-grid">
-        <a class="card" href="https://github.com/RaulPerezAguilar/PROGRAMACION_2025-2026/blob/master/UD1/PSEINT/Ejercicio8%20(Calificacion%20notas).psc" target="_blank">
-          <span class="category">PSeInt</span>
-          <h3>Ejercicio 8 – Calificación de notas</h3>
-          <p>Algoritmo que recibe una nota y devuelve la calificación (A, B, C, …) según criterios.</p>
-        </a>
-        <a class="card" href="https://github.com/RaulPerezAguilar/PROGRAMACION_2025-2026/blob/master/UD1/PSEINT/Ejercicio10%20(Que%20hace).psc" target="_blank">
-          <span class="category">PSeInt</span>
-          <h3>Ejercicio 10 – ¿Qué hace?</h3>
-          <p>Se analiza un fragmento de código y se explica qué realiza cada parte.</p>
-        </a>
-        <a class="card" href="https://github.com/RaulPerezAguilar/PROGRAMACION_2025-2026/blob/master/UD1/PSEINT/Ejercicio1Phy­t%20(C:\Users\01_1DAW_Alum\Desktop\PROG…).psc" target="_blank">
-          <span class="category">PSeInt</span>
-          <h3>Ejercicio 1 – Phy­t / Ruta archivo</h3>
-          <p>Practica en la que se explica la ruta de fichero y su tratamiento en un pseudocódigo.</p>
-        </a>
-        <a class="card" href="https://github.com/RaulPerezAguilar/PROGRAMACION_2025-2026/blob/master/UD1/PSEINT/Ejercicio2Pyth­on%20(login).psc" target="_blank">
-          <span class="category">PSeInt</span>
-          <h3>Ejercicio 2 – Python (login)</h3>
-          <p>Diseño de un algoritmo de login básico con validación de usuario y contraseña.</p>
-        </a>
-        <a class="card" href="https://github.com/RaulPerezAguilar/PROGRAMACION_2025-2026/blob/master/UD1/PSEINT/Ejercicio4%20(Area%20Circulo).psc" target="_blank">
-          <span class="category">PSeInt</span>
-          <h3>Ejercicio 4 – Área de círculo</h3>
-          <p>Se calcula el área de un círculo pidiendo el radio al usuario.</p>
-        </a>
-        <a class="card" href="https://github.com/RaulPerezAguilar/PROGRAMACION_2025-2026/blob/master/UD1/PSEINT/Ejercicio5%20(Media%20de%20notas%20definidas).psc" target="_blank">
-          <span class="category">PSeInt</span>
-          <h3>Ejercicio 5 – Media de notas (definidas)</h3>
-          <p>Se calculan promedio de notas con valores fijos y se muestra resultado.</p>
-        </a>
-        <!-- … continúa para los demás Ejercicios PSeInt … -->
-      </div>
+      <h2>📘 UD1 - Fundamentos de Programación</h2>
+
+      <h3>PSEINT</h3>
+      <ul>
+        <li><a target="_blank" href="https://github.com/RaulPerezAguilar/PROGRAMACION_2025-2026/blob/master/UD1/PSEINT/Ejercicio8%20(Calificacion%20notas).psc">Ejercicio 8 - Calificación de notas</a> — Calcula la nota final según la puntuación numérica.</li>
+        <li><a target="_blank" href="https://github.com/RaulPerezAguilar/PROGRAMACION_2025-2026/blob/master/UD1/PSEINT/Ejercicio10%20(Que%20hace).psc">Ejercicio 10 - ¿Qué hace?</a> — Análisis de un algoritmo para explicar su función.</li>
+        <li><a target="_blank" href="https://github.com/RaulPerezAguilar/PROGRAMACION_2025-2026/blob/master/UD1/PSEINT/Ejercicio9%20(puede%20ser%20triangulo).psc">Ejercicio 9 - ¿Puede ser triángulo?</a> — Verifica si tres lados pueden formar un triángulo.</li>
+        <li><a target="_blank" href="https://github.com/RaulPerezAguilar/PROGRAMACION_2025-2026/blob/master/UD1/PSEINT/Ejercicio5%20(Media%20de%20notas%20definidas).psc">Ejercicio 5 - Media de notas</a> — Calcula la media de varias notas predefinidas.</li>
+      </ul>
+
+      <h3>PYTHON</h3>
+      <ul>
+        <li><a target="_blank" href="https://github.com/RaulPerezAguilar/PROGRAMACION_2025-2026/blob/master/UD1/PYTHON/Ejercicio1%20(hola%20mundo%20con%20variable).py">Ejercicio 1 - Hola mundo con variable</a> — Muestra texto almacenado en una variable.</li>
+        <li><a target="_blank" href="https://github.com/RaulPerezAguilar/PROGRAMACION_2025-2026/blob/master/UD1/PYTHON/Ejercicio2%20(Hola%20con%20nombre%20personal).py">Ejercicio 2 - Hola con nombre personal</a> — Pide un nombre y saluda al usuario.</li>
+        <li><a target="_blank" href="https://github.com/RaulPerezAguilar/PROGRAMACION_2025-2026/blob/master/UD1/PYTHON/Ejercicio3%20(Suma%202%20numeros).py">Ejercicio 3 - Suma de dos números</a> — Pide dos números y muestra su suma.</li>
+        <li><a target="_blank" href="https://github.com/RaulPerezAguilar/PROGRAMACION_2025-2026/blob/master/UD1/PYTHON/Ejercicio8%20(Introducir%20nota%20y%20devolver%20resultado).py">Ejercicio 8 - Nota y resultado</a> — Evalúa si una nota está aprobada o suspendida.</li>
+        <li><a target="_blank" href="https://github.com/RaulPerezAguilar/PROGRAMACION_2025-2026/blob/master/UD1/PYTHON/Ejercicio10%20(100%20veces%20hola%20mundo).py">Ejercicio 10 - 100 veces “Hola mundo”</a> — Bucle que imprime el mensaje 100 veces.</li>
+        <li><a target="_blank" href="https://github.com/RaulPerezAguilar/PROGRAMACION_2025-2026/blob/master/UD1/PYTHON/Ejercicio15%20(Tabla%20de%20multiplicar).py">Ejercicio 15 - Tabla de multiplicar</a> — Muestra la tabla del número indicado.</li>
+        <li><a target="_blank" href="https://github.com/RaulPerezAguilar/PROGRAMACION_2025-2026/blob/master/UD1/PYTHON/Ejercicio19%20(Factorial%20de%20un%20numero).py">Ejercicio 19 - Factorial de un número</a> — Calcula el factorial de un número entero.</li>
+        <li><a target="_blank" href="https://github.com/RaulPerezAguilar/PROGRAMACION_2025-2026/blob/master/UD1/PYTHON/ProyectoT1.py">Proyecto T1</a> — Proyecto integrador de la unidad con estructuras condicionales y bucles.</li>
+      </ul>
+
+      <h3>PYTHON (Ampliación)</h3>
+      <ul>
+        <li><a target="_blank" href="https://github.com/RaulPerezAguilar/PROGRAMACION_2025-2026/blob/master/UD1/PYTHON%20(Ampliacion)/Ejercicio1%20(maximo%20comun%20divisor).py">Ejercicio 1 - Máximo común divisor</a> — Cálculo del MCD entre dos números.</li>
+        <li><a target="_blank" href="https://github.com/RaulPerezAguilar/PROGRAMACION_2025-2026/blob/master/UD1/PYTHON%20(Ampliacion)/Ejercicio4%20(Ordenar).py">Ejercicio 4 - Ordenar</a> — Ordena una lista de números ingresados por el usuario.</li>
+        <li><a target="_blank" href="https://github.com/RaulPerezAguilar/PROGRAMACION_2025-2026/blob/master/UD1/PYTHON%20(Ampliacion)/Ejercicio7%20(Dia%20de%20la%20semana).py">Ejercicio 7 - Día de la semana</a> — Determina el día según número ingresado.</li>
+      </ul>
     </section>
 
-    <!-- Unidad 1 – Python -->
+    <!-- UD2 -->
     <section>
-      <h2>📘 UD1 - Python</h2>
-      <div class="card-grid">
-        <a class="card" href="https://github.com/RaulPerezAguilar/PROGRAMACION_2025-2026/blob/master/UD1/PYTHON/Ejercicio1%20(hola%20mundo%20con%20variable).py" target="_blank">
-          <span class="category">Python</span>
-          <h3>Ejercicio 1 – Hola mundo con variable</h3>
-          <p>Primer programa en Python que usa una variable para mostrar “Hola mundo”.</p>
-        </a>
-        <a class="card" href="https://github.com/RaulPerezAguilar/PROGRAMACION_2025-2026/blob/master/UD1/PYTHON/Ejercicio2%20(Hola%20con%20nombre%20personal).py" target="_blank">
-          <span class="category">Python</span>
-          <h3>Ejercicio 2 – Hola con nombre personal</h3>
-          <p>El programa pide un nombre al usuario y saluda personalizadamente.</p>
-        </a>
-        <a class="card" href="https://github.com/RaulPerezAguilar/PROGRAMACION_2025-2026/blob/master/UD1/PYTHON/Ejercicio3%20(Suma%202%20numeros).py" target="_blank">
-          <span class="category">Python</span>
-          <h3>Ejercicio 3 – Suma 2 números</h3>
-          <p>Programa para sumar dos números introducidos por el usuario.</p>
-        </a>
-        <!-- … y así para el resto … -->
-      </div>
-    </section>
+      <h2>📗 UD2 - Arrays y Librerías</h2>
 
-    <!-- Unidad 1 – Python (Ampliación) -->
-    <section>
-      <h2>📘 UD1 – Python (Ampliación)</h2>
-      <div class="card-grid">
-        <a class="card" href="https://github.com/RaulPerezAguilar/PROGRAMACION_2025-2026/blob/master/UD1%20(Python%20Ampliacion)/Ejercicio1%20(maximo%20comun%20divisor).py" target="_blank">
-          <span class="category">Python (Ampliación)</span>
-          <h3>Ejercicio 1 – Máximo común divisor</h3>
-          <p>Cálculo del MCD entre dos números pedidos al usuario.</p>
-        </a>
-        <!-- … más ejercicios ampliación … -->
-      </div>
+      <h3>PYTHON</h3>
+      <ul>
+        <li><a target="_blank" href="https://github.com/RaulPerezAguilar/PROGRAMACION_2025-2026/blob/master/UD2/PYTHON/Ejercicio1%20(Probar%20y%20recorrer%20Arrays).py">Ejercicio 1 - Probar y recorrer Arrays</a> — Introducción al manejo de listas en Python.</li>
+      </ul>
     </section>
-
-    <!-- Unidad 2 – Python -->
-    <section>
-      <h2>📗 UD2 - Python</h2>
-      <div class="card-grid">
-        <a class="card" href="https://github.com/RaulPerezAguilar/PROGRAMACION_2025-2026/blob/master/UD2%20PYTHON/Ejercicio1%20(Probar%20y%20recorrer%20Arrays).py" target="_blank">
-          <span class="category">Python</span>
-          <h3>Ejercicio 1 – Probar y recorrer Arrays</h3>
-          <p>Uso de listas en Python y recorrido de elementos con bucles.</p>
-        </a>
-        <!-- … continúa para futuros ejercicios UD2 … -->
-      </div>
-    </section>
-
   </main>
 
   <footer>
-    <p>© 2025 | Portafolio de Programación — Repositorio público en GitHub</p>
+    <p>© 2025 | Portafolio de Programación — Desarrollado por Raúl Pérez Aguilar</p>
   </footer>
 </body>
 </html>
