@@ -1,109 +1,183 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Sitio personal de programación - proyectos, código y tutoriales." />
-  <title>Mi Página de Programación</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portafolio de Programación</title>
   <style>
-    :root {
-      --bg-color: #0d1117;
-      --text-color: #e6edf3;
-      --accent-color: #58a6ff;
-      --card-bg: #161b22;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: "Fira Code", monospace;
-    }
-
+    /* ---- Estilos base ---- */
     body {
-      background-color: var(--bg-color);
-      color: var(--text-color);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      min-height: 100vh;
-      text-align: center;
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #1e1e1e;
+      color: #e0e0e0;
+      line-height: 1.6;
     }
 
     header {
+      text-align: center;
       padding: 2rem;
+      background: linear-gradient(135deg, #2c2c2c, #3d3d3d);
+      border-bottom: 2px solid #555;
     }
 
     header h1 {
-      color: var(--accent-color);
+      margin: 0;
+      color: #00bcd4;
       font-size: 2.5rem;
-      margin-bottom: 0.5rem;
+      letter-spacing: 1px;
+      animation: fadeIn 1s ease-in-out;
     }
 
     header p {
-      font-size: 1.2rem;
-      opacity: 0.8;
+      color: #ccc;
+      font-style: italic;
     }
 
-    main {
+    /* ---- Contenedor principal ---- */
+    .container {
       width: 90%;
-      max-width: 800px;
-      margin-top: 2rem;
+      max-width: 1000px;
+      margin: 2rem auto;
+      animation: fadeUp 1s ease-in-out;
     }
 
-    .card {
-      background-color: var(--card-bg);
+    .folder {
+      background-color: #2b2b2b;
+      margin-bottom: 1rem;
       border-radius: 8px;
-      padding: 1.5rem;
-      margin-bottom: 1.5rem;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-      transition: transform 0.2s ease;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      transition: transform 0.2s;
     }
 
-    .card:hover {
-      transform: translateY(-5px);
+    .folder:hover {
+      transform: scale(1.01);
     }
 
-    a {
-      color: var(--accent-color);
-      text-decoration: none;
+    .folder h2 {
+      background-color: #00bcd4;
+      color: #1e1e1e;
+      padding: 0.8rem;
+      margin: 0;
+      border-radius: 8px 8px 0 0;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .content {
+      padding: 1rem;
+      display: none;
+    }
+
+    .content ul {
+      list-style: none;
+      padding-left: 1rem;
+    }
+
+    .content li {
+      margin: 0.3rem 0;
+      padding-left: 0.5rem;
+      border-left: 2px solid #00bcd4;
+      transition: color 0.2s;
+    }
+
+    .content li:hover {
+      color: #00bcd4;
     }
 
     footer {
-      margin-top: auto;
-      padding: 2rem;
-      opacity: 0.7;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #888;
+      border-top: 1px solid #444;
+    }
+
+    /* ---- Animaciones ---- */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
 <body>
+
   <header>
-    <h1>👨‍💻 Mi Página de Programación</h1>
-    <p>Proyectos, tutoriales y aprendizaje continuo en desarrollo web y software.</p>
+    <h1>📘 Portafolio de Programación</h1>
+    <p>Ejercicios y proyectos de PSeInt y Python</p>
   </header>
 
-  <main>
-    <section class="card">
-      <h2>💡 Sobre mí</h2>
-      <p>Hola, soy <strong>Tu Nombre</strong>, un apasionado por el código y la tecnología. Aquí comparto mis proyectos y lo que voy aprendiendo.</p>
-    </section>
+  <div class="container">
+    <!-- UD1 -->
+    <div class="folder">
+      <h2 onclick="toggleContent(this)">📁 UD1</h2>
+      <div class="content">
+        <ul>
+          <li><strong>PSeInt:</strong>
+            <ul>
+              <li>Ejercicio8 (Calificación notas)</li>
+              <li>Ejercicio10 (Qué hace)</li>
+              <li>Ejercicio1Python (Hola + nombre)</li>
+              <li>Ejercicio2Python (Login)</li>
+              <li>Ejercicio4 (Área Círculo)</li>
+              <li>Ejercicio9 (Año bisiesto)</li>
+              <li>...</li>
+            </ul>
+          </li>
+          <li><strong>Python:</strong>
+            <ul>
+              <li>Ejercicio1 (Hola mundo con variable)</li>
+              <li>Ejercicio5 (Login correcto con bucle)</li>
+              <li>Ejercicio10 (100 veces hola mundo)</li>
+              <li>Ejercicio15 (Tabla de multiplicar)</li>
+              <li>Ejercicio27 (Calculadora optimizada)</li>
+              <li>ProyectoT1.py</li>
+              <li>...</li>
+            </ul>
+          </li>
+          <li><strong>Python (Ampliación):</strong>
+            <ul>
+              <li>Ejercicio1 (Máximo común divisor)</li>
+              <li>Ejercicio4 (Ordenar)</li>
+              <li>Ejercicio7 (Día de la semana)</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
 
-    <section class="card">
-      <h2>🚀 Proyectos Destacados</h2>
-      <ul style="list-style: none; padding: 0;">
-        <li><a href="https://github.com/tuusuario/proyecto1" target="_blank">🔗 Proyecto 1</a> – App web con HTML, CSS y JavaScript.</li>
-        <li><a href="https://github.com/tuusuario/proyecto2" target="_blank">🔗 Proyecto 2</a> – Script en Python para automatizar tareas.</li>
-      </ul>
-    </section>
-
-    <section class="card">
-      <h2>📫 Contacto</h2>
-      <p>Puedes encontrarme en <a href="https://github.com/tuusuario" target="_blank">GitHub</a> o escribirme a <a href="mailto:tuemail@example.com">tuemail@example.com</a>.</p>
-    </section>
-  </main>
+    <!-- UD2 -->
+    <div class="folder">
+      <h2 onclick="toggleContent(this)">📁 UD2</h2>
+      <div class="content">
+        <ul>
+          <li><strong>Python:</strong>
+            <ul>
+              <li>Ejercicio1 (Probar y recorrer Arrays)</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
 
   <footer>
-    <p>© 2025 Tu Nombre — Hecho con ❤️ y HTML.</p>
+    © 2025 - Portafolio creado por [Tu Nombre] | GitHub Pages
   </footer>
+
+  <script>
+    function toggleContent(element) {
+      const content = element.nextElementSibling;
+      const isVisible = content.style.display === 'block';
+      document.querySelectorAll('.content').forEach(c => c.style.display = 'none');
+      content.style.display = isVisible ? 'none' : 'block';
+    }
+  </script>
+
 </body>
 </html>
