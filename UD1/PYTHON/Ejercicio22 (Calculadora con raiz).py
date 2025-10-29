@@ -44,7 +44,7 @@ elif accion == "raiz":
     if num < 0: #Comprobamos que el numero no sea negativo
         print ("No se puede calcular la raiz de un numero negativo")
     else:
-        resultado = num ** 0.5 #multiplicamos por 0.5 para calcular la raiz cuadrada ya que es lo mismo que elevar a 1/2
+        resultado = num * 0.5 #multiplicamos por 0.5 para calcular la raiz cuadrada ya que es lo mismo que elevar a 1/2
         print ("La raiz es: " + str(resultado))
 else:
     print ("Accion no valida") 
