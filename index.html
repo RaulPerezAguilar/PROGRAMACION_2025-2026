@@ -4,9 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portafolio de Programación 2025-2026</title>
-
   <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@400;600&display=swap" rel="stylesheet">
-
   <style>
     :root {
       --bg: #1e1e1e;
@@ -15,140 +13,114 @@
       --muted: #9e9e9e;
       --section-bg: #252526;
     }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    * {box-sizing:border-box;margin:0;padding:0;}
     body {
-      font-family: 'Inter', sans-serif;
-      background-color: var(--bg);
-      color: var(--fg);
-      padding-bottom: 4rem;
-      animation: fadeIn 1s ease;
+      font-family:'Inter',sans-serif;
+      background-color:var(--bg);
+      color:var(--fg);
+      animation:fadeIn 1s ease;
+      line-height:1.7;
     }
     header {
-      text-align: center;
-      padding: 3rem 1rem;
-      background: linear-gradient(135deg, #2a2a2a, #1a1a1a);
-      border-bottom: 2px solid var(--accent);
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+      text-align:center;
+      padding:3rem 1rem;
+      background:linear-gradient(135deg,#2a2a2a,#1a1a1a);
+      border-bottom:2px solid var(--accent);
+      box-shadow:0 2px 8px rgba(0,0,0,0.4);
     }
     header h1 {
-      font-family: 'Fira Code', monospace;
-      color: var(--accent);
-      font-size: 2.3rem;
-      margin-bottom: 0.5rem;
+      font-family:'Fira Code',monospace;
+      color:var(--accent);
+      font-size:2.4rem;
+      margin-bottom:.4rem;
     }
-    header p {
-      color: var(--muted);
-      font-size: 1.1rem;
-    }
-    main {
-      max-width: 900px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-    }
+    header p {color:var(--muted);font-size:1.1rem;}
+    main {max-width:950px;margin:2rem auto;padding:0 1rem;}
     section {
-      background: var(--section-bg);
-      border-radius: 10px;
-      padding: 1.5rem 2rem;
-      margin-bottom: 2rem;
-      transition: background 0.3s ease;
+      background:var(--section-bg);
+      border-radius:10px;
+      padding:2rem;
+      margin-bottom:2rem;
+      transition:background .3s ease;
     }
-    section:hover {
-      background: #2c2c2c;
-    }
+    section:hover{background:#2c2c2c;}
     h2 {
-      font-family: 'Fira Code', monospace;
-      color: var(--accent);
-      font-size: 1.6rem;
-      margin-bottom: 1rem;
-      border-left: 4px solid var(--accent);
-      padding-left: .6rem;
+      font-family:'Fira Code',monospace;
+      color:var(--accent);
+      font-size:1.6rem;
+      margin-bottom:1rem;
+      border-left:4px solid var(--accent);
+      padding-left:.6rem;
     }
-    h3 {
-      color: var(--accent);
-      margin-top: 1rem;
-      margin-bottom: .6rem;
-      font-size: 1.2rem;
-    }
-    ul {
-      list-style: none;
-      padding-left: 1rem;
-      border-left: 1px solid #333;
-    }
-    li {
-      margin-bottom: .5rem;
-      transition: transform .2s ease;
-    }
-    li:hover {
-      transform: translateX(4px);
-    }
-    a {
-      color: var(--fg);
-      text-decoration: none;
-    }
-    a:hover {
-      color: var(--accent);
-      text-decoration: underline;
-    }
-    footer {
-      text-align: center;
-      color: var(--muted);
-      margin-top: 2rem;
-      font-size: 0.9rem;
-    }
-    @keyframes fadeIn {
-      from {opacity: 0; transform: translateY(10px);}
-      to {opacity: 1; transform: translateY(0);}
-    }
+    h3 {color:var(--accent);margin-top:1.2rem;margin-bottom:.6rem;font-size:1.2rem;}
+    ul {list-style:none;padding-left:1rem;border-left:1px solid #333;}
+    li {margin-bottom:.5rem;transition:transform .2s ease;}
+    li:hover{transform:translateX(4px);}
+    a {color:var(--fg);text-decoration:none;}
+    a:hover{color:var(--accent);text-decoration:underline;}
+    p {margin-bottom:1rem;color:var(--fg);}
+    footer {text-align:center;color:var(--muted);margin-top:2rem;padding:2rem 0;font-size:.9rem;}
+    @keyframes fadeIn {from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:translateY(0);}}
   </style>
 </head>
-
 <body>
   <header>
     <h1>Portafolio de Programación 2025-2026</h1>
-    <p>Ejercicios realizados en Python y PSeInt</p>
+    <p>Apuntes y ejercicios desarrollados por Raúl Pérez Aguilar</p>
   </header>
 
   <main>
-    <!-- UD1 -->
+    <!-- ==================== UD1 ==================== -->
     <section>
       <h2>📘 UD1 - Fundamentos de Programación</h2>
 
-      <h3>PSEINT</h3>
+      <h3>🧠 Apuntes del tema</h3>
+      <p>En esta primera unidad se abordaron los conceptos básicos de programación estructurada. Se estudiaron los tipos de datos, variables, operadores aritméticos y lógicos, así como las estructuras de control (condicionales y bucles). También se introdujo el pseudocódigo con PSeInt como herramienta para diseñar algoritmos de manera visual antes de implementarlos en Python.</p>
+      <p>Uno de los objetivos principales fue comprender la importancia de planificar el código y aprender a traducir una idea lógica en instrucciones que pueda ejecutar un ordenador. Además, se insistió en la correcta indentación, el uso de comentarios y la claridad en la nomenclatura de las variables.</p>
+      <p>Los ejercicios realizados permitieron afianzar la comprensión de condicionales <code>if/else</code>, bucles <code>for</code> y <code>while</code>, así como el trabajo con operaciones matemáticas y cadenas de texto. Python fue el lenguaje elegido por su legibilidad y versatilidad para la enseñanza inicial de la programación.</p>
+
+      <h3>💻 Ejercicios realizados - PSeInt</h3>
       <ul>
-        <li><a target="_blank" href="https://github.com/RaulPerezAguilar/PROGRAMACION_2025-2026/blob/master/UD1/PSEINT/Ejercicio8%20(Calificacion%20notas).psc">Ejercicio 8 - Calificación de notas</a> — Calcula la nota final según la puntuación numérica.</li>
-        <li><a target="_blank" href="https://github.com/RaulPerezAguilar/PROGRAMACION_2025-2026/blob/master/UD1/PSEINT/Ejercicio10%20(Que%20hace).psc">Ejercicio 10 - ¿Qué hace?</a> — Análisis de un algoritmo para explicar su función.</li>
-        <li><a target="_blank" href="https://github.com/RaulPerezAguilar/PROGRAMACION_2025-2026/blob/master/UD1/PSEINT/Ejercicio9%20(puede%20ser%20triangulo).psc">Ejercicio 9 - ¿Puede ser triángulo?</a> — Verifica si tres lados pueden formar un triángulo.</li>
-        <li><a target="_blank" href="https://github.com/RaulPerezAguilar/PROGRAMACION_2025-2026/blob/master/UD1/PSEINT/Ejercicio5%20(Media%20de%20notas%20definidas).psc">Ejercicio 5 - Media de notas</a> — Calcula la media de varias notas predefinidas.</li>
+        <li><a target="_blank" href="https://github.com/RaulPerezAguilar/PROGRAMACION_2025-2026/blob/master/UD1/PSEINT/Ejercicio8%20(Calificacion%20notas).psc">Ejercicio 8 - Calificación de notas</a> — Determina la nota cualitativa según la puntuación numérica.</li>
+        <li><a target="_blank" href="https://github.com/RaulPerezAguilar/PROGRAMACION_2025-2026/blob/master/UD1/PSEINT/Ejercicio9%20(puede%20ser%20triangulo).psc">Ejercicio 9 - ¿Puede ser triángulo?</a> — Evalúa si tres lados pueden formar un triángulo válido.</li>
+        <li><a target="_blank" href="https://github.com/RaulPerezAguilar/PROGRAMACION_2025-2026/blob/master/UD1/PSEINT/Ejercicio10%20(Que%20hace).psc">Ejercicio 10 - ¿Qué hace?</a> — Interpretación de un algoritmo dado para analizar su salida.</li>
       </ul>
 
-      <h3>PYTHON</h3>
+      <h3>💻 Ejercicios realizados - Python</h3>
       <ul>
-        <li><a target="_blank" href="https://github.com/RaulPerezAguilar/PROGRAMACION_2025-2026/blob/master/UD1/PYTHON/Ejercicio1%20(hola%20mundo%20con%20variable).py">Ejercicio 1 - Hola mundo con variable</a> — Muestra texto almacenado en una variable.</li>
-        <li><a target="_blank" href="https://github.com/RaulPerezAguilar/PROGRAMACION_2025-2026/blob/master/UD1/PYTHON/Ejercicio2%20(Hola%20con%20nombre%20personal).py">Ejercicio 2 - Hola con nombre personal</a> — Pide un nombre y saluda al usuario.</li>
-        <li><a target="_blank" href="https://github.com/RaulPerezAguilar/PROGRAMACION_2025-2026/blob/master/UD1/PYTHON/Ejercicio3%20(Suma%202%20numeros).py">Ejercicio 3 - Suma de dos números</a> — Pide dos números y muestra su suma.</li>
-        <li><a target="_blank" href="https://github.com/RaulPerezAguilar/PROGRAMACION_2025-2026/blob/master/UD1/PYTHON/Ejercicio8%20(Introducir%20nota%20y%20devolver%20resultado).py">Ejercicio 8 - Nota y resultado</a> — Evalúa si una nota está aprobada o suspendida.</li>
-        <li><a target="_blank" href="https://github.com/RaulPerezAguilar/PROGRAMACION_2025-2026/blob/master/UD1/PYTHON/Ejercicio10%20(100%20veces%20hola%20mundo).py">Ejercicio 10 - 100 veces “Hola mundo”</a> — Bucle que imprime el mensaje 100 veces.</li>
-        <li><a target="_blank" href="https://github.com/RaulPerezAguilar/PROGRAMACION_2025-2026/blob/master/UD1/PYTHON/Ejercicio15%20(Tabla%20de%20multiplicar).py">Ejercicio 15 - Tabla de multiplicar</a> — Muestra la tabla del número indicado.</li>
-        <li><a target="_blank" href="https://github.com/RaulPerezAguilar/PROGRAMACION_2025-2026/blob/master/UD1/PYTHON/Ejercicio19%20(Factorial%20de%20un%20numero).py">Ejercicio 19 - Factorial de un número</a> — Calcula el factorial de un número entero.</li>
-        <li><a target="_blank" href="https://github.com/RaulPerezAguilar/PROGRAMACION_2025-2026/blob/master/UD1/PYTHON/ProyectoT1.py">Proyecto T1</a> — Proyecto integrador de la unidad con estructuras condicionales y bucles.</li>
-      </ul>
-
-      <h3>PYTHON (Ampliación)</h3>
-      <ul>
-        <li><a target="_blank" href="https://github.com/RaulPerezAguilar/PROGRAMACION_2025-2026/blob/master/UD1/PYTHON%20(Ampliacion)/Ejercicio1%20(maximo%20comun%20divisor).py">Ejercicio 1 - Máximo común divisor</a> — Cálculo del MCD entre dos números.</li>
-        <li><a target="_blank" href="https://github.com/RaulPerezAguilar/PROGRAMACION_2025-2026/blob/master/UD1/PYTHON%20(Ampliacion)/Ejercicio4%20(Ordenar).py">Ejercicio 4 - Ordenar</a> — Ordena una lista de números ingresados por el usuario.</li>
-        <li><a target="_blank" href="https://github.com/RaulPerezAguilar/PROGRAMACION_2025-2026/blob/master/UD1/PYTHON%20(Ampliacion)/Ejercicio7%20(Dia%20de%20la%20semana).py">Ejercicio 7 - Día de la semana</a> — Determina el día según número ingresado.</li>
+        <li><a target="_blank" href="https://github.com/RaulPerezAguilar/PROGRAMACION_2025-2026/blob/master/UD1/PYTHON/Ejercicio1%20(hola%20mundo%20con%20variable).py">Ejercicio 1 - Hola mundo con variable</a> — Primer contacto con Python y las variables.</li>
+        <li><a target="_blank" href="https://github.com/RaulPerezAguilar/PROGRAMACION_2025-2026/blob/master/UD1/PYTHON/Ejercicio2%20(Hola%20con%20nombre%20personal).py">Ejercicio 2 - Saludo personalizado</a> — Uso de entrada de usuario y concatenación de cadenas.</li>
+        <li><a target="_blank" href="https://github.com/RaulPerezAguilar/PROGRAMACION_2025-2026/blob/master/UD1/PYTHON/Ejercicio3%20(Suma%202%20numeros).py">Ejercicio 3 - Suma de dos números</a> — Ejemplo de lectura y conversión de datos numéricos.</li>
+        <li><a target="_blank" href="https://github.com/RaulPerezAguilar/PROGRAMACION_2025-2026/blob/master/UD1/PYTHON/Ejercicio8%20(Introducir%20nota%20y%20devolver%20resultado).py">Ejercicio 8 - Evaluación de nota</a> — Implementación de condicionales para clasificar resultados.</li>
+        <li><a target="_blank" href="https://github.com/RaulPerezAguilar/PROGRAMACION_2025-2026/blob/master/UD1/PYTHON/Ejercicio15%20(Tabla%20de%20multiplicar).py">Ejercicio 15 - Tabla de multiplicar</a> — Reforzamiento del uso de bucles.</li>
+        <li><a target="_blank" href="https://github.com/RaulPerezAguilar/PROGRAMACION_2025-2026/blob/master/UD1/PYTHON/Ejercicio19%20(Factorial%20de%20un%20numero).py">Ejercicio 19 - Factorial de un número</a> — Ejemplo práctico de recursividad o bucle acumulativo.</li>
+        <li><a target="_blank" href="https://github.com/RaulPerezAguilar/PROGRAMACION_2025-2026/blob/master/UD1/PYTHON/ProyectoT1.py">Proyecto T1</a> — Proyecto integrador aplicando todos los conceptos previos.</li>
       </ul>
     </section>
 
-    <!-- UD2 -->
+    <!-- ==================== UD2 ==================== -->
     <section>
-      <h2>📗 UD2 - Arrays y Librerías</h2>
+      <h2>📗 UD2 - Arrays, Funciones y Librerías</h2>
 
-      <h3>PYTHON</h3>
+      <h3>🧠 Apuntes del tema</h3>
+      <p>En esta unidad se estudió la organización de datos mediante estructuras lineales como las listas (arrays) y se introdujo la modularización del código mediante funciones. También se vio cómo importar librerías externas y cómo crear las propias.</p>
+      <p>El uso de arrays permitió simplificar problemas que requerían almacenar múltiples valores, como gestionar notas, nombres o resultados. Se trabajó con índices, iteraciones y funciones integradas de Python como <code>len()</code>, <code>append()</code> o <code>range()</code>.</p>
+      <p>Las funciones se explicaron desde un punto de vista práctico: cómo definirlas, pasar parámetros, devolver valores y documentarlas adecuadamente. Este concepto se aplicó en ejercicios donde la lógica se dividía en subprogramas reutilizables.</p>
+
+      <h3>💻 Ejercicios realizados - Python</h3>
       <ul>
-        <li><a target="_blank" href="https://github.com/RaulPerezAguilar/PROGRAMACION_2025-2026/blob/master/UD2/PYTHON/Ejercicio1%20(Probar%20y%20recorrer%20Arrays).py">Ejercicio 1 - Probar y recorrer Arrays</a> — Introducción al manejo de listas en Python.</li>
+        <li><a target="_blank" href="https://github.com/RaulPerezAguilar/PROGRAMACION_2025-2026/blob/master/UD2/PYTHON/Ejercicio1%20(Probar%20y%20recorrer%20Arrays).py">Ejercicio 1 - Probar y recorrer Arrays</a> — Demostración del uso de bucles y listas.</li>
+        <li><em>Próximamente: funciones personalizadas, matrices bidimensionales y manejo de módulos.</em></li>
       </ul>
+    </section>
+
+    <!-- ==================== UD3 (Ficticia, para mostrar continuidad) ==================== -->
+    <section>
+      <h2>📘 UD3 - Programación estructurada avanzada</h2>
+
+      <h3>🧠 Apuntes del tema</h3>
+      <p>En esta unidad se profundiza en la gestión de errores mediante excepciones, el uso de diccionarios y tuplas, y la interacción con archivos de texto. También se analizan las buenas prácticas en la organización del código y la creación de módulos reutilizables.</p>
+      <p>Aunque los ejercicios de esta unidad están en desarrollo, los apuntes reflejan la importancia de escribir código robusto, legible y modular, siguiendo los principios de la programación estructurada.</p>
     </section>
   </main>
 
