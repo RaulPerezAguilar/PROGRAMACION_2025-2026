@@ -27,3 +27,12 @@ while True:
 for i in range(3):  # Permite buscar 3 números
     n = int(input("Introduce un número del 1 al 10: "))
     print("El numero esta en la posicion", buscar())
+
+def buscarbucle():
+    for index in range(len(numeros)):
+        if numeros[index] == n:
+            return index
+    return "El número no se encuentra en la lista."
+
+n = int(input("Introduce un número del 1 al 10 para buscar con bucle: "))
+print("El numero esta en la posicion", buscarbucle())
