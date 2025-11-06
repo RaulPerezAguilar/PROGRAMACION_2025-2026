@@ -15,3 +15,15 @@ print("El numero esta en la posicion", buscar())
 n = int(input("Añade un numero al array: "))
 numeros.append(n)
 print("El numero esta en la posicion", buscar())
+
+#Con un bucle while
+while True:
+    n = int(input("Introduce un número del 1 al 10 (0 para salir): "))
+    if n == 0:
+        break
+    print("El numero esta en la posicion", buscar())
+
+#Con un bucle for
+for i in range(3):  # Permite buscar 3 números
+    n = int(input("Introduce un número del 1 al 10: "))
+    print("El numero esta en la posicion", buscar())
