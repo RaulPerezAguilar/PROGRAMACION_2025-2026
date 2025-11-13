@@ -5,7 +5,7 @@ Array1 = [1, 2, 3, 4, 5]
 copia1 = Array1.copy()  # Crear una copia superficial de Array1
 
 #Copia con recorte (Slice)
-copia2 = Array1.Slice(1, 4)  # Crear un recorte de Array1 desde el índice 1 hasta el 3
+copia2 = Array1[2:4]  # Crear una copia usando slicing
 
 #Crear copia manual
 copia3 = []
