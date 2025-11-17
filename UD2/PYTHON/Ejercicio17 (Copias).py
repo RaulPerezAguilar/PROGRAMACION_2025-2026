@@ -6,6 +6,7 @@ copia1 = Array1.copy()  # Crear una copia superficial de Array1
 
 #Copia con recorte (Slice)
 copia2 = Array1[2:4]  # Crear una copia usando slicing
+print("Copia con slicing (elementos 2 a 3):", copia2)
 
 #Crear copia manual
 copia3 = []
@@ -17,6 +18,8 @@ for i in Array1:
 copia4 = Array1  # Asignar la referencia de Array1 a copia4
 copia4.pop()  # Eliminar el último elemento de copia4
 print("Array1 después de modificar copia4:", Array1)  # Array1 también se verá afectado
+copia3.pop(0)  # Eliminar el primer elemento de copia3
+print("copia3 después de eliminar el primer elemento:", copia3)  # copia3
 
 #Compara los 4 arrays usando el algoritmo dle ejercicio 17
 def comparar_listas(lista1, lista2):
