@@ -38,11 +38,7 @@ def comprobacion(a):
 
         mayus = nombre[0].isupper()
 
-        numero = False
-        for c in nombre:
-            if c.isdigit(): #CON EL BUCLE COMPROBAMOS LETRA POR LETRA SI TIENE DIGITOS
-                numero = True
-                break
+        numero = (r"\d", nombre)
 
         longitud = 5 <= len(nombre) <= 20
 
@@ -51,8 +47,8 @@ def comprobacion(a):
         else:
             print(f"\033[31m{nombre}: MAL \033[0m")
 
-n = input("Ingrese ID: ")
-buscar_id(a, n)
+#n = input("Ingrese ID: ")
+#buscar_id(a, n)
 alto_bajo(a)
 comprobacion(a)
 
