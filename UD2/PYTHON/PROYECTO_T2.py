@@ -47,8 +47,8 @@ def comprobacion(a):
         else:
             print(f"\033[31m{nombre}: MAL \033[0m")
 
-#n = input("Ingrese ID: ")
-#buscar_id(a, n)
+n = input("Ingrese ID: ")
+buscar_id(a, n)
 alto_bajo(a)
 comprobacion(a)
 
