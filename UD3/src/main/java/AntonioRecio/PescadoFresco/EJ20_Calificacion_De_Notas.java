@@ -24,16 +24,20 @@ public class EJ20_Calificacion_De_Notas {
                 break;
             case 5 :
                 System.out.print("Tu nota es suficiente");
+                break;
             case 6 :
                 System.out.print("Tu nota es bien");
+                break;
             case 7,8 :
                 System.out.print("Tu nota es notable");
+                break;
             case 9,10 :
                 System.out.print("Tu nota es sobresaliente");
+                break;
             }
 
         } else {
-        System.out.print("Nota no vavida");
+        System.out.print("Nota no valida");
         }
                 // TODO code application logic here
     }
