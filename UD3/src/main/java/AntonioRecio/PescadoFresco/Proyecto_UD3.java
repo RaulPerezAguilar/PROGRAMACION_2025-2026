@@ -1,0 +1,153 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+package AntonioRecio.PescadoFresco;
+import java.util.Scanner;
+/**
+ *
+ * @author usuario
+ */
+public class Proyecto_UD3 {
+    public static void bicicleta(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Fran sale con la bici");
+        System.out.print("¿Pero fran lleva casco?: ");
+        Boolean n = sc.nextBoolean();
+        if (n == true) {
+            System.out.println("Fran lleva la cabeza protegida y se dirige camino a Torremolinos");
+        } else {
+            System.out.println("Fran va a caerse de la bici");
+        }
+    }
+        public static void comer() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("-----En el menu de Fran hay-----");
+        System.out.println("1: Habichuela");
+        System.out.println("2: Lentejas");
+        System.out.println("3: Macarrones");
+        System.out.println("4: Un buen chorizo");
+        System.out.print("Que opcion elige Fran: ");
+        int n = sc.nextInt();
+        System.out.println();
+        System.out.println("-----------------------------------");
+        
+        switch (n) {
+            case 1: 
+                System.out.println("Fran se hace unas Habichuelas y las disfruta");
+                break;
+            case 2: 
+                System.out.println("Fran se hace unas Lentejas y las disfruta");
+                break;
+            case 3: 
+                System.out.println("Fran no sabe hacer macarrones y se hace unas lentejas mejor");
+                break;
+            case 4: 
+                System.out.println("Fran se hace un buen chorizo y lo disfruta");
+                break;
+            default:
+                System.out.println("Fran no sabe mas recetas asin que se pide comida por globo");
+        }
+}
+        
+        public static void gritar(){
+            Scanner sc = new Scanner(System.in);
+            System.out.println("--------------------------------------------------");
+            System.out.println("Fran esta enfadado, le apetece gritar en su casa ");
+            System.out.println("¿Que va a gritar Fran?");
+            String n = sc.next();
+            String mayus = n.toUpperCase();
+            System.out.println("--------------------------------------------------");
+            System.out.println("Fran coge aire y grita: ¡¡¡" + mayus + "!!!");
+            System.out.println("Fran esta feliz de estar desahogado");
+            System.out.println("--------------------------------------------------");
+
+            
+        }
+        
+        public static void acostarse(){
+            Scanner sc = new Scanner(System.in);
+            System.out.println("-------------------------------------------");
+            System.out.println("Fran va a contar ovejas para poder dormir");
+            System.out.print("Cuantas ovejas quiere contar antes de quedarse dormido: ");
+            int n = sc.nextInt();
+            System.out.println("Fran se acuesta y comienza a contar ovejas");
+            for (int i = 0; i <= n; i++ ){
+                System.out.println("fran a contado " + i + " ovejas");
+            }
+            System.out.println("Fran se quedo dormido");
+            System.out.println("------------------------------------------------");
+            
+        }
+        
+        public static void mates() {
+            Scanner sc = new Scanner(System.in);
+            System.out.println("-------------Fran puede hacer las siguientes operaciones-------------");
+            System.out.println("1: Sumar");
+            System.out.println("2: Redondear");
+            System.out.println("3: Restar");
+            System.out.println("Que operacion realizara Fran: ");
+            int n = sc.nextInt();
+            System.out.println("-------------------------------------------------");
+            if (n == 1) {
+                System.out.println("Primer numero: ");
+                int n1 = sc.nextInt();
+                System.out.println("Segundo numero: ");
+                int n2 = sc.nextInt();
+                int suma =  n1 + n2;
+                System.out.println("El resultado es: " + suma);
+            } else if (n == 2) {
+                System.out.println("Numero a rendondear: ");
+                float m = sc.nextFloat();
+                int redondeo = (int)m;
+                System.out.println("El redondeo es: " + redondeo);
+            } else if (n == 3) {
+                System.out.println("Fran no sabe restar, mejor va a sumar");
+                System.out.println("Primer numero: ");
+                int n1 = sc.nextInt();
+                System.out.println("Segundo numero: ");
+                int n2 = sc.nextInt();
+                int suma =  n1 + n2;
+            } else {
+             System.out.println("Fran no sabe hacer mas operaciones");   
+            }
+        }
+        
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("-------------------------------");
+        System.out.println("1: Ir en bici");
+        System.out.println("2: Comer");
+        System.out.println("3: Gritar");
+        System.out.println("4: Acostarse");
+        System.out.println("5: Mates");
+        System.out.println("6: Fin");
+        System.out.print("¿que hace Fran?: ");
+        int eleccion = sc.nextInt();
+        System.out.println("--------------------------------");
+        switch (eleccion) {
+            case 1:
+                bicicleta();
+                break;
+           case 2:
+                comer();
+                break;
+           case 3:
+                gritar();
+                break;
+           case 4:
+               acostarse();
+               break;
+           case 5:
+               mates();
+               break;
+           case 6:
+               System.out.println("Fran se queda sin hacer nada mirando un punto fijo");
+               break;
+        }        
+    }
+    
+}
