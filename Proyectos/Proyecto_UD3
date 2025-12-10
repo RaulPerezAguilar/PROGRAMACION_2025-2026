@@ -2,13 +2,13 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
-package proyecto3;
+package AntonioRecio.PescadoFresco;
 import java.util.Scanner;
 /**
  *
  * @author usuario
  */
-public class Proyecto3 {
+public class Proyecto_UD3 {
     public static void bicicleta(){
         Scanner sc = new Scanner(System.in);
         System.out.println("Fran sale con la bici");
@@ -100,6 +100,7 @@ public class Proyecto3 {
                 System.out.println("Numero a rendondear: ");
                 float m = sc.nextFloat();
                 int redondeo = (int)m;
+                System.out.println("El redondeo es: " + redondeo);
             } else if (n == 3) {
                 System.out.println("Fran no sabe restar, mejor va a sumar");
                 System.out.println("Primer numero: ");
@@ -117,14 +118,36 @@ public class Proyecto3 {
      */
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        System.out.println("-------------------------------");
+        System.out.println("1: Ir en bici");
+        System.out.println("2: Comer");
+        System.out.println("3: Gritar");
+        System.out.println("4: Acostarse");
+        System.out.println("5: Mates");
+        System.out.println("6: Fin");
         System.out.print("¿que hace Fran?: ");
-        int eleccion;
-        eleccion = sc.nextInt();
-        
-        System.out.println("1: coge la bicileta");
-        System.out.println("2: comer");
-        System.out.println("3: coge la bicileta");
-        
+        int eleccion = sc.nextInt();
+        System.out.println("--------------------------------");
+        switch (eleccion) {
+            case 1:
+                bicicleta();
+                break;
+           case 2:
+                comer();
+                break;
+           case 3:
+                gritar();
+                break;
+           case 4:
+               acostarse();
+               break;
+           case 5:
+               mates();
+               break;
+           case 6:
+               System.out.println("Fran se queda sin hacer nada mirando un punto fijo");
+               break;
+        }        
     }
     
 }
