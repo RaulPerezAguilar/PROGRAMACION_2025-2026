@@ -6,7 +6,7 @@ public class EJ12 {
 
     public static void main(String[] args) {
 
-        // Lista con valores iniciales
+        // Lista con valores iniciales.
         ArrayList<Integer> lista = new ArrayList<>(
                 Arrays.asList(10, 20, 30, 40, 50, 60, 70, 80, 90, 100)
         );
