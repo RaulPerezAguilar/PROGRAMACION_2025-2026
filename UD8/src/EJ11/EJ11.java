@@ -6,7 +6,7 @@ public class EJ11 {
 
     public static void main(String[] args) {
 
-        // HashSet evita duplicados automáticamente
+        // HashSet evita duplicados automáticamente.
         Set<String> libros = new HashSet<>();
 
         // Añadir libros
