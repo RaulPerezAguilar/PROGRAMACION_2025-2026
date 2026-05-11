@@ -35,7 +35,7 @@ public class EJ7 {
 
         // Lee la siguiente letra
         System.out.println((char) sr.read()); // O
-
+        System.out.println((char) sr.read()); // L
         /*
          * reset()
          * ----------------
