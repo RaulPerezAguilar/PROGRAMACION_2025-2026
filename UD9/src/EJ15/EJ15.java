@@ -1,78 +1,50 @@
-package EJ15;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import java.io.File;
 
-import java.io.FileWriter;
-import java.io.IOException;
-import java.util.ArrayList;
-
-/*
- * EJERCICIO 15
- *
- * PASOS:
- * 1. Creamos una lista de personas.
- * 2. Generamos manualmente un archivo XML.
- * 3. Guardamos los datos dentro del XML.
- * 4. El archivo podrá compartirse con otros compañeros.
- */
-
-public class EJ15 {
+public class LectorConfiguracion {
 
     public static void main(String[] args) {
-
-        // Lista de contactos
-        ArrayList<Persona> contactos = new ArrayList<>();
-
-        // Añadimos personas
-        contactos.add(new Persona("Juan", "Calle Sol 12", "600111222"));
-        contactos.add(new Persona("Ana", "Avenida Luna 8", "611222333"));
-        contactos.add(new Persona("Carlos", "Plaza Mayor 4", "622333444"));
-
-        // Nombre del archivo XML
-        String archivo = "contactos.xml";
-
         try {
 
-            // Writer para escribir texto en el archivo
-            FileWriter writer = new FileWriter(archivo);
+            // 1. Factoría y constructor
+            DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+            DocumentBuilder builder = factory.newDocumentBuilder();
 
-            /*
-             * ESTRUCTURA XML
-             * Creamos las etiquetas principales.
-             */
+            // 2. Parsear XML
+            Document documento = builder.parse(new File("config.xml"));
 
-            writer.write("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n");
-            writer.write("<contactos>\n");
+            documento.getDocumentElement().normalize();
 
-            // Recorremos la lista
-            for (Persona p : contactos) {
+            // 3. Raíz
+            Element raiz = documento.getDocumentElement();
 
-                writer.write("   <persona>\n");
+            // 4. base-datos
+            NodeList listaBaseDatos = raiz.getElementsByTagName("base-datos");
+            Node nodoBaseDatos = listaBaseDatos.item(0);
 
-                writer.write("      <nombre>"
-                        + p.getNombre()
-                        + "</nombre>\n");
+            // 5. hijos
+            NodeList hijos = nodoBaseDatos.getChildNodes();
 
-                writer.write("      <direccion>"
-                        + p.getDireccion()
-                        + "</direccion>\n");
+            System.out.println("\nNúmero de hijos detectados: " + hijos.getLength());
 
-                writer.write("      <telefono>"
-                        + p.getTelefono()
-                        + "</telefono>\n");
+            System.out.println("--- Listando hijos ---");
 
-                writer.write("   </persona>\n");
+            for (int i = 0; i < hijos.getLength(); i++) {
+
+                Node hijo = hijos.item(i);
+
+                System.out.println("Hijo " + i +
+                        " -> Tipo: " + hijo.getNodeType() +
+                        " | Nombre: " + hijo.getNodeName() +
+                        " | Valor: " + hijo.getTextContent());
             }
 
-            // Cerramos etiqueta principal
-            writer.write("</contactos>");
-
-            // Cerramos flujo
-            writer.close();
-
-            System.out.println("Archivo XML creado correctamente.");
-
-        } catch (IOException e) {
-
-            System.out.println("Error al escribir el XML.");
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
